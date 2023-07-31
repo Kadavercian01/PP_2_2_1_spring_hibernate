@@ -10,7 +10,6 @@ import java.util.List;
 
 @Service
 public class UserServiceImp implements UserService {
-
    private final UserDao userDao;
 
    @Autowired
@@ -23,8 +22,7 @@ public class UserServiceImp implements UserService {
    public void add(User user) {
       userDao.add(user);
    }
-
-   @Transactional(readOnly = true)
+   @Transactional
    @Override
    public List<User> listUsers() {
       return userDao.listUsers();

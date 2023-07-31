@@ -23,8 +23,7 @@ public class CarServiceImp implements CarService {
     public void add(Car car) {
         carDao.add(car);
     }
-
-    @Transactional(readOnly = true)
+    @Transactional
     @Override
     public List<Car> listCars() {
         return carDao.listCars();
