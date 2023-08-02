@@ -30,12 +30,7 @@ public class MainApp {
 
       List<User> users = userService.listUsers();
       for (User user : users) {
-         StringBuilder stringBuilder = new StringBuilder();
-         stringBuilder.append("Id = "+user.getId())
-                 .append("First Name = "+user.getFirstName())
-                 .append("Last Name = "+user.getLastName())
-                 .append("Email = "+user.getEmail());
-         System.out.println(stringBuilder.toString());
+         System.out.println(user);
       }
 
       System.out.println(userService.findUser("tesla", 1));
